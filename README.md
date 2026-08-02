@@ -30,3 +30,64 @@ Manajemen persediaan gudang pada bisnis e-commerce sering mengalami masalah *ove
 ├── app.py                 # Streamlit Web App
 ├── requirements.txt
 └── README.md
+
+```
+
+---
+
+## 🚀 How to Run Locally
+
+1. **Clone repositori ini:**
+```bash
+git clone [https://github.com/Ari-1711/ecommerce-demand-forecasting.git](https://github.com/Ari-1711/ecommerce-demand-forecasting.git)
+cd ecommerce-demand-forecasting
+
+```
+
+
+2. **Buat dan aktifkan Virtual Environment (Direkomendasikan):**
+* **Windows:**
+```cmd
+python -m venv .venv
+.venv\Scripts\activate
+
+```
+
+
+* **Mac/Linux:**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+
+```
+
+
+
+
+3. **Instal dependensi:**
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+
+```
+
+
+*Jika terjadi kendala saat menginstal via `requirements.txt`, instal library utama secara langsung:*
+```bash
+pip install streamlit pandas numpy catboost scikit-learn
+
+```
+
+
+4. **Jalankan aplikasi Streamlit:**
+```bash
+streamlit run app.py
+
+```
+
+
+*(Atau gunakan `python -m streamlit run app.py` jika perintah `streamlit` tidak terdeteksi).*
+
+```
+
+```
