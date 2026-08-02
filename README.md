@@ -1,5 +1,9 @@
 # 📦 E-Commerce Demand Forecasting & Dynamic Safety Stock System
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ecommerce-demand-forecasting-iwsftg5m748zswmhgtx8ie.streamlit.app/)
+
+> **Live Demo:** 🚀 [Akses Dashboard Interaktif Streamlit](https://ecommerce-demand-forecasting-iwsftg5m748zswmhgtx8ie.streamlit.app/)
+
 Sistem prediksi permintaan barang (*demand forecasting*) 7 hari ke depan pada tingkat SKU e-commerce berbasis **CatBoost Regressor** yang terintegrasi dengan **Analisis ABC Pareto** dan alokasi **Dynamic Safety Stock**.
 
 ---
