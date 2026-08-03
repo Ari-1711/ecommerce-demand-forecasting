@@ -100,7 +100,4 @@ Ari Hermawan
 
 GitHub: @Ari-1711
 
-Live Web App: Smart Waste Management App
-
-
 ---
