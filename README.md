@@ -95,9 +95,10 @@ streamlit run app.py
 ```
 
 ```
-👤 Penulis
-Ari Hermawan
+## 👤 Penulis
 
-GitHub: @Ari-1711
+**Ari Hermawan**
+
+* GitHub: [@Ari-1711](https://www.google.com/search?q=https://github.com/Ari-1711)
 
 ---
