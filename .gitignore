@@ -1,7 +1,15 @@
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
+# Python & Environment
 .venv/
 env/
-.env
-.DS_Store
+__pycache__/
+*.pyc
+
+# IDE & AI Agent Rules/Logs
+.vscode/
+.idea/
+*.log
+
+# Node & Frontend Build
+frontend/node_modules/
+frontend/dist/
+frontend/.next/
