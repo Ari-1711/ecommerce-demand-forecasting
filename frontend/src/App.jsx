@@ -41,7 +41,7 @@ export default function App() {
       if (metricsJson.success) setMetrics(metricsJson.data);
     } catch (err) {
       console.error('Error fetching KPIs:', err);
-      setError(`Gagal terhubung ke FastAPI Backend Server (${API_BASE || 'port 8001'}). Pastikan server backend running.`);
+      setError(`Gagal terhubung ke FastAPI Backend Server (${API_BASE || 'port 8002'}). Pastikan server backend running.`);
     } finally {
       setLoadingKpis(false);
     }
@@ -99,12 +99,12 @@ export default function App() {
   }, [fetchRecommendations]);
 
   return (
-    <div className="min-h-screen bg-[#090d16] text-slate-200 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-screen bg-[#090d16] text-slate-200 flex flex-col font-sans selection:bg-indigo-500 selection:text-white overflow-x-hidden">
       {/* Navigation Header */}
       <Navbar onRefresh={loadAllData} loading={loadingKpis || loadingCharts || loadingTable} />
 
-      {/* Main Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 space-y-6">
+      {/* Main Container with Mobile Responsive Padding */}
+      <main className="flex-1 max-w-7xl w-full mx-auto px-3.5 sm:px-6 lg:px-8 py-4 sm:py-6 space-y-4 sm:space-y-6">
         
         {/* Error Banner */}
         {error && (
@@ -122,7 +122,7 @@ export default function App() {
         </section>
 
         {/* Section 2: Visual Analytics & Pareto Analysis */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5">
           {/* Main Pareto Dual-Axis Chart */}
           <div className="lg:col-span-8">
             <ParetoChart data={abcData.pareto} loading={loadingCharts} />
@@ -135,26 +135,26 @@ export default function App() {
         </section>
 
         {/* Section 3: Category Distribution & Inventory Insights */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5">
           <div className="lg:col-span-4">
             <AbcDonutChart data={abcData} loading={loadingCharts} />
           </div>
 
           {/* Policy & Operational Guidance */}
-          <div className="lg:col-span-8 saas-card p-5 rounded-xl flex flex-col justify-between">
+          <div className="lg:col-span-8 saas-card p-4 sm:p-5 rounded-xl flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-sm font-semibold text-white flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-amber-400" />
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2 mb-2">
+                <h3 className="text-xs sm:text-sm font-semibold text-white flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-amber-400 flex-shrink-0" />
                   Kebijakan Gudang & Rekomendasi Stok
                 </h3>
-                <span className="text-xs text-slate-400 font-medium bg-slate-800 px-2 py-0.5 rounded border border-slate-700">
+                <span className="text-[10px] sm:text-xs text-slate-400 font-medium bg-slate-800 px-2 py-0.5 rounded border border-slate-700 self-start sm:self-auto">
                   Prinsip Pareto (80/20)
                 </span>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-3">
-                <div className="bg-slate-900/80 p-3.5 rounded-lg border border-slate-800 space-y-1">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3">
+                <div className="bg-slate-900/80 p-3 sm:p-3.5 rounded-lg border border-slate-800 space-y-1">
                   <div className="text-xs font-semibold text-rose-400 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
                     Kelas A (Fast-Moving)
@@ -164,7 +164,7 @@ export default function App() {
                   </p>
                 </div>
 
-                <div className="bg-slate-900/80 p-3.5 rounded-lg border border-slate-800 space-y-1">
+                <div className="bg-slate-900/80 p-3 sm:p-3.5 rounded-lg border border-slate-800 space-y-1">
                   <div className="text-xs font-semibold text-amber-400 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                     Kelas B (Medium-Moving)
@@ -174,7 +174,7 @@ export default function App() {
                   </p>
                 </div>
 
-                <div className="bg-slate-900/80 p-3.5 rounded-lg border border-slate-800 space-y-1">
+                <div className="bg-slate-900/80 p-3 sm:p-3.5 rounded-lg border border-slate-800 space-y-1">
                   <div className="text-xs font-semibold text-cyan-400 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
                     Kelas C (Slow-Moving)
@@ -186,11 +186,11 @@ export default function App() {
               </div>
             </div>
 
-            <div className="mt-3 pt-2.5 border-t border-slate-800 text-[11px] text-slate-400 flex flex-wrap items-center justify-between gap-2">
+            <div className="mt-3 pt-2.5 border-t border-slate-800 text-[10px] sm:text-[11px] text-slate-400 flex flex-wrap items-center justify-between gap-2">
               <span className="flex items-center gap-1.5 text-emerald-400 font-medium">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> Model CatBoost 800 (MAE: 86.41 | R²: 45.53%)
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" /> Model CatBoost 800 (MAE: 86.41 | R²: 45.53%)
               </span>
-              <span className="text-slate-500 font-mono">Pipeline FastAPI + React Vite Active</span>
+              <span className="text-slate-500 font-mono text-[10px]">FastAPI + React Engine Active</span>
             </div>
           </div>
         </section>
@@ -217,7 +217,7 @@ export default function App() {
       <footer className="border-t border-slate-800/80 py-4 text-center text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>E-Commerce Demand Forecasting Dashboard &copy; 2026</span>
-          <span>FastAPI + Vite React Industrial Analytics Engine</span>
+          <span>FastAPI + Vite React Mobile-First Analytics Engine</span>
         </div>
       </footer>
     </div>
