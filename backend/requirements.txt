@@ -4,7 +4,3 @@ pandas
 numpy
 catboost
 scikit-learn
-streamlit
-holidays
-matplotlib
-plotly

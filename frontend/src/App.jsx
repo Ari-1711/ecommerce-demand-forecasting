@@ -7,6 +7,8 @@ import AbcDonutChart from './components/AbcDonutChart';
 import StockTable from './components/StockTable';
 import { ShieldCheck, Zap, AlertCircle } from 'lucide-react';
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+
 export default function App() {
   const [kpis, setKpis] = useState(null);
   const [metrics, setMetrics] = useState(null);
@@ -29,8 +31,8 @@ export default function App() {
     setError(null);
     try {
       const [kpisRes, metricsRes] = await Promise.all([
-        fetch('/api/kpis'),
-        fetch('/api/metrics')
+        fetch(`${API_BASE}/api/kpis`),
+        fetch(`${API_BASE}/api/metrics`)
       ]);
       const kpisJson = await kpisRes.json();
       const metricsJson = await metricsRes.json();
@@ -39,7 +41,7 @@ export default function App() {
       if (metricsJson.success) setMetrics(metricsJson.data);
     } catch (err) {
       console.error('Error fetching KPIs:', err);
-      setError('Gagal terhubung ke FastAPI Backend Server. Pastikan uvicorn backend running.');
+      setError(`Gagal terhubung ke FastAPI Backend Server (${API_BASE || 'port 8001'}). Pastikan server backend running.`);
     } finally {
       setLoadingKpis(false);
     }
@@ -48,7 +50,7 @@ export default function App() {
   const fetchAbcDistribution = async () => {
     setLoadingCharts(true);
     try {
-      const res = await fetch('/api/abc-distribution');
+      const res = await fetch(`${API_BASE}/api/abc-distribution`);
       const json = await res.json();
       if (json.success) {
         setAbcData(json.data);
@@ -69,7 +71,7 @@ export default function App() {
         page: page.toString(),
         limit: limit.toString()
       });
-      const res = await fetch(`/api/recommendations?${params.toString()}`);
+      const res = await fetch(`${API_BASE}/api/recommendations?${params.toString()}`);
       const json = await res.json();
       if (json.success) {
         setRecommendations(json.data);

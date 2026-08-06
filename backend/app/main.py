@@ -1,6 +1,18 @@
+import os
+import sys
+
+# Add project root to sys.path
+workspace_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+if workspace_root not in sys.path:
+    sys.path.insert(0, workspace_root)
+
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
-from backend.app.data_loader import DataLoader
+
+try:
+    from backend.app.data_loader import DataLoader
+except ImportError:
+    from app.data_loader import DataLoader
 
 app = FastAPI(
     title="E-Commerce Demand Forecasting API",
@@ -8,7 +20,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Enable CORS for React frontend (Vite local dev server)
+# Enable CORS for React frontend (Vite local dev server & Vercel deployments)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -19,6 +31,18 @@ app.add_middleware(
 
 # Initialize singleton data loader
 data_loader = DataLoader()
+
+
+@app.get("/")
+@app.get("/api")
+def root_health():
+    """Health check endpoint for Vercel Serverless deployment."""
+    return {
+        "status": "online",
+        "service": "E-Commerce Demand Forecasting API",
+        "model": "CatBoost 800",
+        "version": "1.0.0"
+    }
 
 
 @app.get("/api/kpis")
@@ -77,4 +101,4 @@ def get_recommendations(
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("backend.app.main:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("app.main:app", host="127.0.0.1", port=8002, reload=True)
