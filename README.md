@@ -24,7 +24,7 @@
 - [🛠️ Kendala Teknis \& Solusi Mitigasi](#️-kendala-teknis--solusi-mitigasi)
 - [💻 Fitur Dashboard \& Panduan Menjalankan Lokal](#-fitur-dashboard--panduan-menjalankan-lokal-fastapi--react)
 - [📂 Struktur Direktori Proyek](#-struktur-direktori-proyek)
-- [👨‍💻 Penulis \& Tim (Fasilkom Universitas Mercu Buana)](#-penulis--tim-fasilkom-universitas-mercu-buana)
+- [👥 Penulis, Kontributor \& Catatan Rilis](#-penulis-kontributor--catatan-rilis)
 - [🚀 Roadmap Masa Depan](#-roadmap-masa-depan)
 
 ---
@@ -191,19 +191,37 @@ npm run dev
 
 ---
 
-## 👨‍💻 Penulis & Tim (Fasilkom Universitas Mercu Buana)
+## 👥 Penulis, Kontributor & Catatan Rilis
 
-- 👑 **Ari Hermawan (Lead Fullstack & Machine Learning Engineer)**
-  - *Peran:* Rekayasa *pipeline* anti-*leakage*, pemodelan CatBoost Tuned, arsitektur REST API FastAPI, pembangunan antarmuka React Tailwind, dan setup *deployment* Vercel.
-  - *GitHub:* [@Ari-1711](https://github.com/Ari-1711)
-- 📊 **Adistiya Firdaus (Data Analyst & BI Specialist)**
-  - *Peran:* Eksplorasi data historis, validasi metrik bisnis perputaran stok, dan formulasi KPI analitik rantai pasok.
-- ⚙️ **Royhan Achmad (Data Engineer)**
-  - *Peran:* Pembersihan data ekstensif (*data cleaning*), perancangan transformasi fitur deret waktu (*rolling window & lag*), dan integrasi kalender libur multi-negara.
-- 🤖 **Firstyan Rizky Sesarwanto (Machine Learning Specialist)**
-  - *Peran:* Eksperimen komparatif model dasar (XGBoost, LightGBM), kalkulasi metrik kesalahan (MAE, RMSE, R²), dan pengaturan parameter *hyper-tuning*.
-- 📦 **Hilgan Armeylito Geanardi Rumbiak (System & Inventory Analyst)**
-  - *Peran:* Perumusan logika alokasi *Dynamic Safety Stock* berbasis model MAE, segmentasi batas Pareto ABC, dan penyusunan dokumentasi teknis fungsional.
+Proyek ini bermula dari riset akademik mahasiswa **Fakultas Ilmu Komputer, Universitas Mercu Buana**, yang kemudian diaudit, direfaktor, dan diimplementasikan ke dalam aplikasi web produksi secara mandiri.
+
+---
+
+### 🚀 Pengembangan Aplikasi, Audit Pipeline & Deployment (Production Version)
+- **Ari Hermawan** — *Lead Fullstack & Machine Learning Engineer*
+  - **Arsitektur & Deployment:** Membangun REST API menggunakan **FastAPI**, merancang antarmuka web interaktif dengan **React & Tailwind CSS**, serta mengorkestrasi *deployment production* di **Vercel**.
+  - **Refaktorisasi ML (Leakage-Free Pipeline):** Melakukan audit metodologi pra-deployment dan merombak *pipeline* pelatihan untuk memastikan model siap produksi (*production-ready*).
+  - **GitHub:** [@Ari-1711](https://github.com/Ari-1711)
+
+---
+
+### 📚 Tim Peneliti Akademik (Riset Awal & Analisis BI)
+*Berdasarkan manuskrip riset awal: "Optimasi Rantai Pasok E-Commerce Melalui Integrasi Business Intelligence dan CatBoost Demand Forecasting"*
+
+- **Ari Hermawan** — *Machine Learning Engineer*
+  - **Fokus Riset:** Perancangan arsitektur *pipeline*, eksperimen komparatif (CatBoost, LightGBM, XGBoost), *hyperparameter tuning* model terbaik (CatBoost 800 Trees), dan formulasi matematis *Safety Stock* adaptif berbasis MAE.
+
+- **Royhan Achmad** — *Data Engineer & Data Scientist*
+  - **Fokus Riset:** Pembersihan data transaksi (*filtering* retur kuantitas negatif), rekayasa fitur prediktor deret waktu (*lag*, *rolling mean*, kalender), serta integrasi variabel eksternal (hari libur multi-negara & simulasi cuaca).
+
+- **Adistiya Firdaus** — *Business Intelligence & Data Analyst*
+  - **Fokus Riset:** Analisis data historis, formulasi metrik operasional (*Total Sales Volume, Revenue per Product, Stock Turn Rate*), dan perancangan visualisasi distribusi penjualan per *Region Cluster* di **Power BI**.
+
+- **Firstyan Rizky Sesarwanto** — *Business Intelligence & Data Analyst*
+  - **Fokus Riset:** Segmentasi inventaris berbasis prinsip ABC Pareto, visualisasi proporsi produk (*Pie Chart* Kategori ABC), dan analisis pola musiman volume penjualan (*Line Chart* tren mingguan) di **Power BI**.
+
+- **Hilgan Armeylito Geanardi Rumbiak** — *Business Intelligence & Data Analyst*
+  - **Fokus Riset:** Perancangan *Interactive Matrix Table* integrasi *Demand AI* & *Safety Stock*, serta konfigurasi *Conditional Formatting Alert System* di **Power BI** untuk otomatisasi *Purchase Requisition* ke sistem ERP.
 
 ---
 
