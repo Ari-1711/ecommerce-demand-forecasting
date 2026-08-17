@@ -8,6 +8,14 @@ __pycache__/
 .vscode/
 .idea/
 *.log
+.agents/
+.obsidian/
+.cline/
+.cursor/
+.gemini/
+.aider/
+.impeccable/
+.codex/
 
 # Node & Frontend Build
 frontend/node_modules/
