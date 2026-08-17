@@ -209,19 +209,19 @@ Proyek ini bermula dari riset akademik mahasiswa **Fakultas Ilmu Komputer, Unive
 *Berdasarkan manuskrip riset awal: "Optimasi Rantai Pasok E-Commerce Melalui Integrasi Business Intelligence dan CatBoost Demand Forecasting"*
 
 - **Ari Hermawan** — *Machine Learning Engineer*
-  - **Fokus Riset:** Perancangan arsitektur *pipeline*, eksperimen komparatif (CatBoost, LightGBM, XGBoost), *hyperparameter tuning* model terbaik (CatBoost 800 Trees), dan formulasi matematis *Safety Stock* adaptif berbasis MAE.
+  - **Fokus Riset:** Perancangan arsitektur *pipeline* prediktif, eksperimen komparatif (CatBoost, LightGBM, XGBoost), *hyperparameter tuning* model terbaik (CatBoost 800 Trees), dan formulasi matematis *Safety Stock* adaptif berbasis MAE.
 
 - **Royhan Achmad** — *Data Engineer & Data Scientist*
-  - **Fokus Riset:** Pembersihan data transaksi (*filtering* retur kuantitas negatif), rekayasa fitur prediktor deret waktu (*lag*, *rolling mean*, kalender), serta integrasi variabel eksternal (hari libur multi-negara & simulasi cuaca).
+  - **Fokus Riset:** Rekayasa fitur prediktor deret waktu (*lag* 1–7, *rolling mean* 7 hari, kalender transaksi), serta integrasi variabel eksternal (hari libur multi-negara & simulasi cuaca/suhu).
 
 - **Adistiya Firdaus** — *Business Intelligence & Data Analyst*
-  - **Fokus Riset:** Analisis data historis, formulasi metrik operasional (*Total Sales Volume, Revenue per Product, Stock Turn Rate*), dan perancangan visualisasi distribusi penjualan per *Region Cluster* di **Power BI**.
+  - **Fokus Riset:** Pembersihan data transaksi harian (ETL, *filtering* retur kuantitas negatif `Quantity` > 0), analisis data historis, formulasi metrik operasional (Total Sales Volume, Revenue per Product, Stock Turn Rate), dan perancangan visualisasi distribusi penjualan per Region Cluster di **Power BI**.
 
 - **Firstyan Rizky Sesarwanto** — *Business Intelligence & Data Analyst*
-  - **Fokus Riset:** Segmentasi inventaris berbasis prinsip ABC Pareto, visualisasi proporsi produk (*Pie Chart* Kategori ABC), dan analisis pola musiman volume penjualan (*Line Chart* tren mingguan) di **Power BI**.
+  - **Fokus Riset:** Segmentasi inventaris berbasis prinsip ABC Pareto, visualisasi proporsi produk (*Pie Chart* Kategori ABC), dan analisis pola musiman volume penjualan (*Line Chart* tren mingguan / Week Number) di **Power BI**.
 
 - **Hilgan Armeylito Geanardi Rumbiak** — *Business Intelligence & Data Analyst*
-  - **Fokus Riset:** Perancangan *Interactive Matrix Table* integrasi *Demand AI* & *Safety Stock*, serta konfigurasi *Conditional Formatting Alert System* di **Power BI** untuk otomatisasi *Purchase Requisition* ke sistem ERP.
+  - **Fokus Riset:** Perancangan *Interactive Matrix Table* integrasi Demand AI & Safety Stock, serta konfigurasi Conditional Formatting Alert System di **Power BI** untuk otomatisasi Purchase Requisition ke sistem ERP.
 
 ---
 
