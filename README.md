@@ -91,6 +91,11 @@ Dataset diproses melalui tahapan rekayasa data mendalam untuk membentuk 14 fitur
 
 ## 🏗️ Arsitektur Sistem End-to-End
 
+<div align="center">
+  <img src="./docs/images/Pipeline.png" alt="Arsitektur dan Alur Kerja Pipeline E-Commerce Demand Forecasting" width="100%">
+  <p><em>Diagram Alur Kerja & Arsitektur End-to-End (Fase 1 hingga Fase 6)</em></p>
+</div>
+
 Arsitektur aplikasi ini menggunakan pendekatan **Decoupled (Terpisah)** modern yang ideal untuk komputasi awan serverless:
 1. **Model Layer (Machine Learning):** CatBoost Regressor pre-trained (`.cbm`) yang melayani hasil perhitungan dari *pipeline* CSV lokal.
 2. **Backend (API Layer):** FastAPI dengan arsitektur REST, memproses *data-loading* dan mentransformasikan *dataframe* Pandas menjadi format JSON respons standar. Di-deploy secara *serverless* menggunakan `@vercel/python`.
