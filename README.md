@@ -235,3 +235,4 @@ Proyek ini bermula dari riset akademik mahasiswa **Fakultas Ilmu Komputer, Unive
 - [ ] Menggunakan teknologi data *streaming realtime* (Kafka/Socket.io) untuk menangkap perubahan stok seketika.
 - [ ] Mengeksplorasi algoritma *Deep Learning* (seperti LSTM atau Temporal Fusion Transformers) untuk meningkatkan akurasi volatilitas permintaan jangka panjang.
 - [ ] Mengembangkan modul Autentikasi Admin dan Panel Otorisasi.
+- [ ] Mengotomatisasi *Alert Trigger Reorder* & *Purchase Requisition* yang terintegrasi dengan *live inventory* (ERP/WMS) *real-time*.
