@@ -17,7 +17,8 @@
 ## 📑 Daftar Isi
 - [Ringkasan Eksekutif \& Metrik Utama Produksi](#-ringkasan-eksekutif--metrik-utama-produksi)
 - [🔄 Engineering Evolution: Riset Akademik vs. Versi Produksi Industri](#-engineering-evolution-riset-akademik-vs-versi-produksi-industri)
-- [📊 Spesifikasi Dataset \& Rekayasa 14 Fitur Native](#-spesifikasi-dataset--rekayasa-14-fitur-native)
+- [🗄️ Spesifikasi \& Kutipan Dataset](#️-spesifikasi--kutipan-dataset)
+- [📊 Rekayasa 14 Fitur Native](#-rekayasa-14-fitur-native)
 - [🏗️ Arsitektur Sistem End-to-End](#️-arsitektur-sistem-end-to-end)
 - [📈 Hasil Evaluasi \& Formulasi Dynamic Safety Stock](#-hasil-evaluasi--formulasi-dynamic-safety-stock)
 - [🛠️ Kendala Teknis \& Solusi Mitigasi](#️-kendala-teknis--solusi-mitigasi)
@@ -66,7 +67,20 @@ Penyelesaian isu kebocoran data menghasilkan penyesuaian angka prediksi pada *to
 
 ---
 
-## 📊 Spesifikasi Dataset & Rekayasa 14 Fitur Native
+## 🗄️ Spesifikasi & Kutipan Dataset
+
+Proyek ini menggunakan **[E-Commerce Data](https://www.kaggle.com/datasets/carrie1/ecommerce-data/)** terkemuka dari Kaggle.
+
+- **Total Data Mentah:** 531.285 baris transaksi valid (setelah pembersihan data retur/kuantitas non-positif).
+- **Data Agregasi & Fitur:** 229.825 baris data deret waktu harian per produk (`StockCode`) dengan 14 fitur (fitur lag/rolling, kalender, hari libur, dan cuaca/wilayah).
+- **Target Prediksi:** Permintaan stok horizon jendela 7 hari ke depan (`Quantity_Next_7_Days`).
+- **Strategi Pemisahan Data (Time-Series Split):**
+  - **Set Pelatihan (87,8% / 201.877 baris):** Rentang waktu 9 Desember 2010 s/d 31 Oktober 2011 untuk pelatihan model dan target encoding bebas *data leakage*.
+  - **Set Pengujian (12,2% / 27.948 baris):** Rentang waktu 1 November 2011 s/d 1 Desember 2011 untuk evaluasi performa horizon masa depan.
+
+---
+
+## 📊 Rekayasa 14 Fitur Native
 
 Dataset diproses melalui tahapan rekayasa data mendalam untuk membentuk 14 fitur native (*non-sparse*):
 1. **Fitur Temporal (Time-Series):** *Day of week*, bulan, kuartal, dll., diekstraksi dari tanggal pesanan.
