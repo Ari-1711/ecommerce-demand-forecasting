@@ -182,6 +182,11 @@ npm run dev
  ┃ ┃ ┣ 📜 main.py        # Endpoint API Routes
  ┃ ┃ ┗ 📜 data_loader.py # Logika CSV, sanitasi NaN & DataFrame formatting
  ┃ ┗ 📜 requirements.txt
+ ┣ 📂 data               # Penyimpanan dataset
+ ┃ ┣ 📂 processed        # Data hasil rekayasa fitur (siap training)
+ ┃ ┗ 📂 raw              # Dataset mentah asli
+ ┣ 📂 docs               # Dokumentasi dan aset gambar
+ ┃ ┗ 📂 images           # Gambar arsitektur & alur kerja
  ┣ 📂 frontend           # React (Vite) Presentation UI layer
  ┃ ┣ 📂 src
  ┃ ┃ ┣ 📂 components     # Recharts (ABC, Pareto, KPI), Tabel UI
@@ -191,6 +196,8 @@ npm run dev
  ┃ ┗ 📜 vite.config.js
  ┣ 📂 models             # [Read-Only] Pre-trained models .cbm
  ┣ 📂 notebook           # [Read-Only] Eksperimen ML & EDA (.ipynb)
+ ┣ 📂 src                # Modul logika internal pendukung
+ ┃ ┗ 📜 predictor.py     # Script enkapsulasi inferensi CatBoost
  ┗ 📜 vercel.json        # Orkestrasi multi-layer Vercel (Routing & Python)
 ```
 
