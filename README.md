@@ -8,28 +8,28 @@
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-**[🚀 Akses Live Demo (Dashboard Interaktif)](https://ecommerce-demand-forecasting-git-main-ari-1711s-projects.vercel.app/)**
+**[Akses Live Demo (Dashboard Interaktif)](https://ecommerce-demand-forecasting-git-main-ari-1711s-projects.vercel.app/)**
 
 </div>
 
 ---
 
-## 📑 Daftar Isi
+## Daftar Isi
 - [Ringkasan Eksekutif \& Metrik Utama Produksi](#-ringkasan-eksekutif--metrik-utama-produksi)
-- [🔄 Engineering Evolution: Riset Akademik vs. Versi Produksi Industri](#-engineering-evolution-riset-akademik-vs-versi-produksi-industri)
-- [🗄️ Spesifikasi \& Kutipan Dataset](#️-spesifikasi--kutipan-dataset)
-- [📊 Rekayasa 14 Fitur Native](#-rekayasa-14-fitur-native)
-- [🏗️ Arsitektur Sistem End-to-End](#️-arsitektur-sistem-end-to-end)
-- [📈 Hasil Evaluasi \& Formulasi Dynamic Safety Stock](#-hasil-evaluasi--formulasi-dynamic-safety-stock)
-- [🛠️ Kendala Teknis \& Solusi Mitigasi](#️-kendala-teknis--solusi-mitigasi)
-- [💻 Fitur Dashboard \& Panduan Menjalankan Lokal](#-fitur-dashboard--panduan-menjalankan-lokal-fastapi--react)
-- [📂 Struktur Direktori Proyek](#-struktur-direktori-proyek)
-- [👥 Penulis, Kontributor \& Catatan Rilis](#-penulis-kontributor--catatan-rilis)
-- [🚀 Roadmap Masa Depan](#-roadmap-masa-depan)
+- [Engineering Evolution: Riset Akademik vs. Versi Produksi Industri](#-engineering-evolution-riset-akademik-vs-versi-produksi-industri)
+- [Spesifikasi \& Kutipan Dataset](#️-spesifikasi--kutipan-dataset)
+- [Rekayasa 14 Fitur Native](#-rekayasa-14-fitur-native)
+- [Arsitektur Sistem End-to-End](#️-arsitektur-sistem-end-to-end)
+- [Hasil Evaluasi \& Formulasi Dynamic Safety Stock](#-hasil-evaluasi--formulasi-dynamic-safety-stock)
+- [Kendala Teknis \& Solusi Mitigasi](#️-kendala-teknis--solusi-mitigasi)
+- [Fitur Dashboard \& Panduan Menjalankan Lokal](#-fitur-dashboard--panduan-menjalankan-lokal-fastapi--react)
+- [Struktur Direktori Proyek](#-struktur-direktori-proyek)
+- [Penulis, Kontributor \& Catatan Rilis](#-penulis-kontributor--catatan-rilis)
+- [Roadmap Masa Depan](#-roadmap-masa-depan)
 
 ---
 
-## 📌 Ringkasan Eksekutif & Metrik Utama Produksi
+## Ringkasan Eksekutif & Metrik Utama Produksi
 
 **Problem:** Operasional e-commerce sering mengalami tantangan berat berupa *overstock* (kelebihan stok) dan *stockout* (kekosongan stok) akibat dari tingginya volatilitas permintaan musiman serta lonjakan pembelian *wholesale* (grosir).
 
@@ -44,9 +44,9 @@
 
 ---
 
-## 🔄 Engineering Evolution: Riset Akademik vs. Versi Produksi Industri
+## Engineering Evolution: Riset Akademik vs. Versi Produksi Industri
 
-> 📄 **Catatan Transparansi Riset:** Anda dapat mengakses **[Laporan Penelitian Akademik Awal (v1.0)](https://drive.google.com/file/d/16CGk_kffzf4hZjfDBWCPoUxSJ6-ZbW7t/view?usp=sharing)** (PDF). Dokumen tersebut merupakan versi prototipe riset awal perkuliahan. Harap dicatat bahwa kode di repositori ini dan aplikasi web *live demo* saat ini merupakan **Versi Produksi (v2.0)** yang telah ditingkatkan secara signifikan: 100% bebas dari kebocoran data (*data leakage*), menggunakan 14 fitur *native* tanpa *sparse matrix*, dan menyajikan metrik evaluasi riil yang aman untuk operasional industri.
+> **Catatan Transparansi Riset:** Anda dapat mengakses **[Laporan Penelitian Akademik Awal (v1.0)](https://drive.google.com/file/d/16CGk_kffzf4hZjfDBWCPoUxSJ6-ZbW7t/view?usp=sharing)** (PDF). Dokumen tersebut merupakan versi prototipe riset awal perkuliahan. Harap dicatat bahwa kode di repositori ini dan aplikasi web *live demo* saat ini merupakan **Versi Produksi (v2.0)** yang telah ditingkatkan secara signifikan: 100% bebas dari kebocoran data (*data leakage*), menggunakan 14 fitur *native* tanpa *sparse matrix*, dan menyajikan metrik evaluasi riil yang aman untuk operasional industri.
 
 Proyek ini menyoroti iterasi rekayasa (Engineering Refactor) yang signifikan untuk bertransisi dari fase prototipe riset awal yang rentan, menjadi sistem siap produksi yang efisien, *robust*, dan bebas dari kebocoran data (*data leakage*).
 
@@ -59,15 +59,15 @@ Proyek ini menyoroti iterasi rekayasa (Engineering Refactor) yang signifikan unt
 
 ### Pergeseran Peringkat Top SKU Demand (Sebelum vs Sesudah)
 Penyelesaian isu kebocoran data menghasilkan penyesuaian angka prediksi pada *top items*:
-- 📦 **SKU 23084:** 37,215 unit ➔ **33,238 unit**
-- 📦 **SKU 22197:** 36,344 unit ➔ **32,981 unit**
-- 📦 **SKU 85099B:** 33,534 unit (Pos 4) ➔ **32,348 unit (Naik ke Pos 3)**
-- 📦 **SKU 84077:** 34,297 unit (Pos 3) ➔ **31,710 unit (Turun ke Pos 4)**
-- 📦 **SKU 85123A:** 23,970 unit ➔ **27,788 unit**
+- **SKU 23084:** 37,215 unit ➔ **33,238 unit**
+- **SKU 22197:** 36,344 unit ➔ **32,981 unit**
+- **SKU 85099B:** 33,534 unit (Pos 4) ➔ **32,348 unit (Naik ke Pos 3)**
+- **SKU 84077:** 34,297 unit (Pos 3) ➔ **31,710 unit (Turun ke Pos 4)**
+- **SKU 85123A:** 23,970 unit ➔ **27,788 unit**
 
 ---
 
-## 🗄️ Spesifikasi & Kutipan Dataset
+## Spesifikasi & Kutipan Dataset
 
 Proyek ini menggunakan **[E-Commerce Data](https://www.kaggle.com/datasets/carrie1/ecommerce-data/)** terkemuka dari Kaggle.
 
@@ -80,7 +80,7 @@ Proyek ini menggunakan **[E-Commerce Data](https://www.kaggle.com/datasets/carri
 
 ---
 
-## 📊 Rekayasa 14 Fitur Native
+## Rekayasa 14 Fitur Native
 
 Dataset diproses melalui tahapan rekayasa data mendalam untuk membentuk 14 fitur native (*non-sparse*):
 1. **Fitur Temporal (Time-Series):** *Day of week*, bulan, kuartal, dll., diekstraksi dari tanggal pesanan.
@@ -89,7 +89,7 @@ Dataset diproses melalui tahapan rekayasa data mendalam untuk membentuk 14 fitur
 
 ---
 
-## 🏗️ Arsitektur Sistem End-to-End
+## Arsitektur Sistem End-to-End
 
 <div align="center">
   <img src="./docs/images/Pipeline.png" alt="Arsitektur dan Alur Kerja Pipeline E-Commerce Demand Forecasting" width="100%">
@@ -104,36 +104,36 @@ Arsitektur aplikasi ini menggunakan pendekatan **Decoupled (Terpisah)** modern y
 
 ---
 
-## 📈 Hasil Evaluasi & Formulasi Dynamic Safety Stock
+## Hasil Evaluasi & Formulasi Dynamic Safety Stock
 
 Sistem tidak mengalokasikan Safety Stock (Stok Pengaman) secara konstan untuk semua barang. Formulasi dilakukan secara **dinamis dan adaptif** terhadap tingkat keparahan eror (MAE) dari model, disilangkan dengan prioritas pendapatan (Pareto ABC):
 
-- 🥇 **Barang Kelas A (Pareto Top 20% Penyumbang Pendapatan 80%):** 
+-**Barang Kelas A (Pareto Top 20% Penyumbang Pendapatan 80%):** 
   - Formula: `Safety Stock = 3 × MAE`
   - Contoh: `3 × 86.41 = 260 unit`.
   - *Rasionalisasi:* Toleransi *stockout* adalah nol. Perlindungan maksimal diberikan agar pendapatan tidak hilang.
-- 🥈 **Barang Kelas B (Kontributor Sedang):**
+- **Barang Kelas B (Kontributor Sedang):**
   - Formula: `Safety Stock = 2 × MAE`
-- 🥉 **Barang Kelas C (Kontributor Minor):**
+-  **Barang Kelas C (Kontributor Minor):**
   - Formula: `Safety Stock = 1 × MAE`
 
 ---
 
-## 🛠️ Kendala Teknis & Solusi Mitigasi
+## Kendala Teknis & Solusi Mitigasi
 
-1. **🚨 Data Leakage pada Target Encoding** 
+1. **Data Leakage pada Target Encoding** 
    - *Tantangan:* Metrik riset awal terlihat terlalu akurat. Investigasi menemukan fitur agregasi `mean` menyerap label masa depan ke masa lalu.
    - *Solusi:* Refaktor ulang dengan memisahkan *Time-Series Split* (Training & Testing) di titik awal *pipeline*, lalu mengkalkulasi target encoding secara terisolasi.
-2. **🚨 Sparse Matrix Explosion Akibat OHE**
+2. **Sparse Matrix Explosion Akibat OHE**
    - *Tantangan:* Penggunaan `.get_dummies()` menghasilkan 31 kolom dengan 90% sel bernilai nol, menghabiskan RAM dan memperlambat pohon keputusan.
    - *Solusi:* Migrasi dari arsitektur Scikit-learn ke CatBoost Native Support, menyusutkan matriks menjadi 14 kolom inti yang jauh lebih padat.
-3. **🚨 JSON NaN Parsing Error (FastAPI - React)**
+3. **JSON NaN Parsing Error (FastAPI - React)**
    - *Tantangan:* Pandas menghasilkan bilangan `NaN` atau `Infinity` saat ada target tidak terbaca. FastAPI menolak *serializing* nilai tersebut menjadi JSON standar untuk frontend.
    - *Solusi:* Menerapkan *sanitizer function* di `data_loader.py` untuk mengonversi `np.nan` menjadi angka `0` atau `None` bawaan Python sebelum *return* ke *routing*.
 
 ---
 
-## 💻 Fitur Dashboard & Panduan Menjalankan Lokal (FastAPI + React)
+## Fitur Dashboard & Panduan Menjalankan Lokal (FastAPI + React)
 
 ### Fitur Utama Dashboard Frontend:
 - **Analitik Tingkat Atas:** Total Demand, Total Rekomendasi Restock, Jumlah SKU.
@@ -173,43 +173,43 @@ npm run dev
 
 ---
 
-## 📂 Struktur Direktori Proyek
+## Struktur Direktori Proyek
 
 ```text
-📦 ecommerce-demand-forecasting
- ┣ 📂 backend            # FastAPI serverless layer
- ┃ ┣ 📂 app
- ┃ ┃ ┣ 📜 main.py        # Endpoint API Routes
- ┃ ┃ ┗ 📜 data_loader.py # Logika CSV, sanitasi NaN & DataFrame formatting
- ┃ ┗ 📜 requirements.txt
- ┣ 📂 data               # Penyimpanan dataset
- ┃ ┣ 📂 processed        # Data hasil rekayasa fitur (siap training)
- ┃ ┗ 📂 raw              # Dataset mentah asli
- ┣ 📂 docs               # Dokumentasi dan aset gambar
- ┃ ┗ 📂 images           # Gambar arsitektur & alur kerja
- ┣ 📂 frontend           # React (Vite) Presentation UI layer
- ┃ ┣ 📂 src
- ┃ ┃ ┣ 📂 components     # Recharts (ABC, Pareto, KPI), Tabel UI
- ┃ ┃ ┣ 📜 App.jsx        # Halaman Utama Dashboard
- ┃ ┃ ┗ 📜 index.css      # Injeksi Tailwind CSS
- ┃ ┣ 📜 package.json
- ┃ ┗ 📜 vite.config.js
- ┣ 📂 models             # [Read-Only] Pre-trained models .cbm
- ┣ 📂 notebook           # [Read-Only] Eksperimen ML & EDA (.ipynb)
- ┣ 📂 src                # Modul logika internal pendukung
- ┃ ┗ 📜 predictor.py     # Script enkapsulasi inferensi CatBoost
- ┗ 📜 vercel.json        # Orkestrasi multi-layer Vercel (Routing & Python)
+ ecommerce-demand-forecasting
+ ┣ backend            # FastAPI serverless layer
+ ┃ ┣ app
+ ┃ ┃ ┣ main.py        # Endpoint API Routes
+ ┃ ┃ ┗ data_loader.py # Logika CSV, sanitasi NaN & DataFrame formatting
+ ┃ ┗ requirements.txt
+ ┣ data               # Penyimpanan dataset
+ ┃ ┣ processed        # Data hasil rekayasa fitur (siap training)
+ ┃ ┗ raw              # Dataset mentah asli
+ ┣ docs               # Dokumentasi dan aset gambar
+ ┃ ┗ images           # Gambar arsitektur & alur kerja
+ ┣ frontend           # React (Vite) Presentation UI layer
+ ┃ ┣ src
+ ┃ ┃ ┣ components     # Recharts (ABC, Pareto, KPI), Tabel UI
+ ┃ ┃ ┣ App.jsx        # Halaman Utama Dashboard
+ ┃ ┃ ┗ index.css      # Injeksi Tailwind CSS
+ ┃ ┣ package.json
+ ┃ ┗ vite.config.js
+ ┣ models             # [Read-Only] Pre-trained models .cbm
+ ┣ notebook           # [Read-Only] Eksperimen ML & EDA (.ipynb)
+ ┣ src                # Modul logika internal pendukung
+ ┃ ┗ predictor.py     # Script enkapsulasi inferensi CatBoost
+ ┗ vercel.json        # Orkestrasi multi-layer Vercel (Routing & Python)
 ```
 
 ---
 
-## 👥 Penulis, Kontributor & Catatan Rilis
+## Penulis, Kontributor & Catatan Rilis
 
 Proyek ini bermula dari riset akademik mahasiswa **Fakultas Ilmu Komputer, Universitas Mercu Buana**, yang kemudian diaudit, direfaktor, dan diimplementasikan ke dalam aplikasi web produksi secara mandiri.
 
 ---
 
-### 🚀 Pengembangan Aplikasi, Audit Pipeline & Deployment (Production Version)
+### Pengembangan Aplikasi, Audit Pipeline & Deployment (Production Version)
 - **Ari Hermawan** — *Lead Fullstack & Machine Learning Engineer*
   - **Arsitektur & Deployment:** Membangun REST API menggunakan **FastAPI**, merancang antarmuka web interaktif dengan **React & Tailwind CSS**, serta mengorkestrasi *deployment production* di **Vercel**.
   - **Refaktorisasi ML (Leakage-Free Pipeline):** Melakukan audit metodologi pra-deployment dan merombak *pipeline* pelatihan untuk memastikan model siap produksi (*production-ready*).
@@ -217,7 +217,7 @@ Proyek ini bermula dari riset akademik mahasiswa **Fakultas Ilmu Komputer, Unive
 
 ---
 
-### 📚 Tim Peneliti Akademik (Riset Awal & Analisis BI)
+### Tim Peneliti Akademik (Riset Awal & Analisis BI)
 *Berdasarkan manuskrip riset awal: "Optimasi Rantai Pasok E-Commerce Melalui Integrasi Business Intelligence dan CatBoost Demand Forecasting"*
 
 - **Ari Hermawan** — *Machine Learning Engineer*
@@ -237,7 +237,7 @@ Proyek ini bermula dari riset akademik mahasiswa **Fakultas Ilmu Komputer, Unive
 
 ---
 
-## 🚀 Roadmap Masa Depan
+## Roadmap Masa Depan
 - [ ] Integrasi ke sistem *database* relasional nyata (PostgreSQL/MySQL) menggantikan *flat-file* CSV.
 - [ ] Menggunakan teknologi data *streaming realtime* (Kafka/Socket.io) untuk menangkap perubahan stok seketika.
 - [ ] Mengeksplorasi algoritma *Deep Learning* (seperti LSTM atau Temporal Fusion Transformers) untuk meningkatkan akurasi volatilitas permintaan jangka panjang.
